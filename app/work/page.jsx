@@ -5,8 +5,8 @@ import React, { useState } from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import img from "@/assets/work/be_agile.png"
-
+import img_1 from "@/assets/work/aws_infra.png"
+import img_2 from "@/assets/work/cloud_native_app.png"
 
 import { BsArrowUpRight, BsGithub } from "react-icons/bs";
 
@@ -18,20 +18,37 @@ import Image from "next/image";
 const projects = [
   {
     num: "01",
-    category: "devops",
-    title: "BeAgile Kubernetes Cluster",
+    category: "infrastructure",
+    title: "AWS Infrastructure Setup with Terraform",
     description:
-      "Development and automation of a Kubernetes cluster on EC2 instances using Ansible and Terraform. Managed backups with cronjobs and developed CI/CD pipelines for continuous integration.",
+      "Provisioned and managed AWS infrastructure using Terraform, including EKS clusters, IAM roles, security groups, and VPC configuration.",
     stack: [
-      { name: "Kubernetes" },
       { name: "Terraform" },
       { name: "AWS" },
+      { name: "EKS" },
+      { name: "ECR" },
+      { name: "IAM" },
       { name: "CI/CD" },
-      { name: "Ansible" },
     ],
-    image: img,
+    image: img_1,
     live: "",
-    github: "",
+    github: "https://github.com/DiogoBarros03/aws_infra_setup",
+  },
+  {
+    num: "02",
+    category: "kubernetes",
+    title: "Kubernetes Python App Deployment",
+    description:
+      "Deployed a Python app in Kubernetes for monitoring CPU and memory usage. Created Kubernetes manifests for service and deployment, and used GitHub Actions for CI/CD.",
+    stack: [
+      { name: "Kubernetes" },
+      { name: "Python" },
+      { name: "CI/CD" },
+      { name: "Docker" },
+    ],
+    image: img_2,
+    live: "",
+    github: "https://github.com/DiogoBarros03/cloud-native-monotoring-app",
   }
 ];
 
